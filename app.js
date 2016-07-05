@@ -7,7 +7,23 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 
+var mongoose = require('mongoose');
+var settings = require('./config/settings.js');
+
 var app = express();
+
+var connection = settings.connectionString;
+if (app.get('env') === 'development') {
+  console.log("Connecting to local database...");
+  connection = settings.testDB;
+}
+mongoose.connect(connection, function(err) {
+  if (err) {
+    console.log('Could not connect to MongoDB database', err);
+  } else {
+    console.log('Connected to MongoDB database');
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
