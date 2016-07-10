@@ -1,0 +1,22 @@
+{
+  "name": "red-node",
+  "description": "",
+  "main": "",
+  "authors": [
+    "jc3m <jonathanj.xu@yahoo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/redc-robotics/red-node",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.6",
+    "react": "^15.2.1"
+  }
+}

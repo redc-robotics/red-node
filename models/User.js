@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
-var USerSchema = new mongoose.Schema({
+var UserSchema = new mongoose.Schema({
   firstName: { type: String, required: true },
-  lastName: { type: String, required, true },
+  lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true, dropDups: true },
   passwordDigest: { type: String, required: true },
   member: { type: Boolean, default: false },
