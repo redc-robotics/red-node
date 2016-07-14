@@ -95,20 +95,40 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.navbar {
+    border-radius: 0px;
+}
 
+.navbar-default {
+    background: rgba(0,0,0,0.4);
+}
 
+.navbar-default .navbar-brand {
+    font-family: 'Consolas', monospace;
+    color: white;
+    font-size: 25px;
+}
 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
 
+.navbar-default .navbar-toggle {
+    border: none;
+}
 
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
 
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
 
-
-
-
-
-
-
-
+#redc {
+    color: crimson;
+}
 
 
 /* ==========================================================================
