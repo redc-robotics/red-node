@@ -95,12 +95,54 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: Bebas Neue;
+    src: url("../fonts/BebasNeue/BebasNeue.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Source Sans Pro;
+    font-weight: 400;
+    src: url("../fonts/source-sans-pro/SourceSansPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Source Sans Pro;
+    font-weight: 600;
+    src: url("../fonts/source-sans-pro/SourceSansPro-Semibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Source Sans Pro;
+    font-weight: 700;
+    src: url("../fonts/source-sans-pro/SourceSansPro-Bold.otf") format("opentype");
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: Bebas Neue;
+}
+
+a,p {
+    font-family: Source Sans Pro;
+}
+
+/*
+  =====================================
+  Navigation Bar
+  =====================================
+*/
+
 .navbar {
     border-radius: 0px;
 }
 
 .navbar-default {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.85);
 }
 
 .navbar-default .navbar-brand {
@@ -109,7 +151,14 @@ textarea {
     font-size: 25px;
 }
 
-.navbar-default .navbar-nav > li > a {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
     color: white;
 }
 
@@ -128,6 +177,82 @@ textarea {
 
 #redc {
     color: crimson;
+}
+
+/*
+  =====================================
+  Homepage
+  =====================================
+*/
+
+.jumbotron {
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 0;
+    padding-top: 0px;
+}
+
+.jumbotron-desktop {
+    background-image: url('../img/jumbo.jpeg');
+    /*background-size: 130%;*/
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.jumbotron .jumbo-text {
+    position: absolute;
+    top: 13vh;
+    left: 110px;
+}
+
+.jumbotron h1 {
+    color: white;
+    white-space: pre-line;
+    text-shadow: 3px 3px 5px #000;
+    font-size: 115px;
+    font-family: Bebas Neue;
+    margin-top: 0.67em;
+    margin-bottom: 0.22em;
+}
+
+.jumbotron-mobile {
+    background-image: url('../img/jumbo.jpeg');
+    /*background-size: 130%;*/
+    background-size: cover;
+    background-position: 50% 40%;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #CC143C;
+    border: none;
+    border-radius: 0px;
+    padding: 8px 30px;
+    margin: 0 7px;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #C31237;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #3f3f3f;
+    border: none;
+    border-radius: 0px;
+    padding: 8px 30px;
+    margin: 0 7px;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    color: white;
+    background-color: #3b3b3b;
 }
 
 
