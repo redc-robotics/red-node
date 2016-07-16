@@ -127,8 +127,24 @@ h1,h2,h3,h4,h5,h6 {
     font-family: Bebas Neue;
 }
 
-a,p {
+a,p,label,input {
     font-family: Source Sans Pro;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.btn-close {
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/close.svg');
 }
 
 /*
@@ -236,7 +252,10 @@ a,p {
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:hover,
+.btn-primary:active:focus {
     background-color: #C31237;
 }
 
@@ -255,6 +274,102 @@ a,p {
     background-color: #3b3b3b;
 }
 
+/*
+  =====================================
+  Join Form
+  =====================================
+*/
+
+#join-modal {
+    position: fixed;
+    width: 720px;
+    height: 420px;
+    top: 12%;
+    left: 50%;
+    margin-left: -360px;
+    background-color: white;
+    z-index: 3000;
+}
+
+.modal-content-cs {
+    margin: 15px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-header .btn-default {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    border: none;
+}
+
+.modal-header .btn-default:hover,
+.modal-header .btn-default:focus {
+    background: transparent;
+}
+
+.modal-header h3 {
+    margin-top: 10px;
+    font-family: Source Sans Pro;
+    text-align: center;
+}
+
+.modal-body .form-item {
+    width: 48%;
+}
+
+.modal-body .form-item:nth-child(2n+1) {
+    float: left;
+}
+
+.modal-body .form-item:nth-child(2n) {
+    float: right;
+}
+
+.modal-body .form-item label {
+    font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+.modal-body .form-item input {
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    background: #f6f6f6;
+    padding: 7px;
+    margin-bottom: 14px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.modal-body input:focus {
+    border-color: #787878;
+}
+
+.modal-body a {
+    margin-top: 20px;
+    float: right;
+}
+
+#join-modal .ring-loader {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 30px;
+    margin-left: -50px;
+}
+
+#join-modal-done {
+    font-family: Source Sans Pro;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
 
 /* ==========================================================================
    Helper classes

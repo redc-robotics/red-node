@@ -9,4 +9,9 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
 });
 
+router.post('/join', function(req, res, next) {
+  console.log(req.body);
+  res.send('Success');
+});
+
 module.exports = router;

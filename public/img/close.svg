@@ -1,0 +1,6 @@
+<svg width="100%" height="100%" viewbox="0 0 580 580" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="10" x2="570" y1="570" x1="10" stroke-width="10" stroke="#000" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="570" x2="570" y1="10" x1="10" stroke-width="10" stroke="#000" fill="none"/>
+ </g>
+</svg>
