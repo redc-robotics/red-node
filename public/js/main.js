@@ -7,7 +7,8 @@ $(document).ready(function() {
 
   $('#join-btn').click(function() {
     $('.overlay').removeClass('hidden');
-    $('#join-modal').removeClass('hidden');
+    //$('#join-modal').removeClass('hidden');
+    $('#join-modal').fadeIn(275);
   });
 
   $('.modal-header > .close-form').click(closeForm);
@@ -60,5 +61,5 @@ function setDesktop() {
 
 function closeForm() {
   $('.overlay').addClass('hidden');
-  $('#join-modal').addClass('hidden');
+  $('#join-modal').fadeOut(0);
 }
