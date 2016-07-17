@@ -37,7 +37,7 @@ router.post('/join', function(req, res, next) {
   });
 });
 
-router.get('/contact', function(req, res, next) {
+router.get('/messages', function(req, res, next) {
   Contact.find(function(err, cs) {
     if (err)
       next(err);

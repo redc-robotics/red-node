@@ -1,3 +1,7 @@
+body {
+	padding-bottom: 30px;
+}
+
 .page-content {
     margin-top: 90px;
 }
@@ -6,4 +10,133 @@
 	font-size: 50px;
 	padding-bottom: 25px;
 	border-bottom: 1px solid #ccc;
+}
+
+.contact-cols-wrapper {
+	margin-bottom: 90px;
+}
+
+
+
+.contact-form-wrapper h2 {
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+#contact-form .form-item {
+    width: 48%;
+}
+
+#contact-form .form-item:nth-child(2n+1) {
+    float: left;
+}
+
+#contact-form .form-item:nth-child(2n) {
+    float: right;
+}
+
+#contact-form .form-item label {
+    font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+#contact-form .form-item input {
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    background: #f6f6f6;
+    padding: 7px;
+    margin-bottom: 22px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#contact-form input:focus {
+    border-color: #787878;
+}
+
+#contact-form .form-fields {
+	height: 200px;
+}
+
+#contact-form .details {
+	float: left;
+	display: inline-block;
+}
+
+#contact-form .message {
+	height: 145px;
+	float: right;
+	display: inline-block;
+}
+
+#contact-form .message > div {
+	height: calc(100% - 20px);
+}
+
+#contact-form .message label {
+	font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+#contact-form .message textarea {
+	height: 100%;
+	width: 100%;
+	border-radius: 0;
+    border: 1px solid #d1d1d1;
+    background: #f6f6f6;
+    padding: 7px;
+    font-size: 18px;
+}
+
+#contact-form .message textarea:focus {
+    border-color: #787878;
+}
+
+#contact-form #contact-submit-form {
+	margin-top: 40px;
+	float: right;
+}
+
+
+
+#contact-success-modal {
+    position: fixed;
+    width: 430px;
+    height: 150px;
+    top: 32%;
+    left: 50%;
+    margin-left: -215px;
+    background-color: white;
+    z-index: 3000;
+    display: none;
+    text-align: center;
+}
+
+#contact-success-modal .ring-loader {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+}
+
+#contact-success-modal h3 {
+    padding-top: 20px;
+}
+
+#contact-success-modal .contact-modal-finish button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+}
+
+#contact-success-modal .contact-modal-finish button:hover,
+#contact-success-modal .contact-modal-finish button:focus {
+    background: none;
 }

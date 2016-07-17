@@ -54,7 +54,7 @@
             <div class="container">
                 <div class="page-content">
                     <h1>Contact</h1>
-                    <div>
+                    <div class="contact-cols-wrapper clearfix">
                         <div class="col-md-4 col-lg-4 col-xl-4">
                             <h3>General</h3>
                             <p>General inquries can be made to <a href="mailto:redcrobotics@gmail.com">redcrobotics@gmail.com</a> or by calling us at (484) 753-4580</p>
@@ -72,16 +72,64 @@
                             <p>A form to join the team can be found on the <a href="/">home page</a></p>
                         </div>
                     </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Submit a Contact Form</h2>
+                        <form id="contact-form" action="/contact" method="post" accept-charset="UTF-8">
+                            <div class="form-fields clearfix col-md-6 col-lg-6 col-xl-6">
+                                <div class="details">
+                                    <div class="form-item">
+                                        <label>First Name</label>
+                                        <input type="text" name="firstName">
+                                    </div>
+                                    <div class="form-item">
+                                        <label>Last Name</label>
+                                        <input type="text" name="lastName">
+                                    </div>
+                                    <div class="form-item">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phoneNumber">
+                                    </div>
+                                    <div class="form-item">
+                                        <label>Email</label>
+                                        <input type="text" name="email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="message col-md-6 col-lg-6 col-xl-6">
+                                <div>
+                                    <label>Message</label>
+                                    <textarea name="message"></textarea>
+                                </div>
+                            </div>
+
+                            <a id="contact-submit-form" class="btn btn-primary">Submit</a>
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <div class="overlay hidden"></div>
         </div>
 
-            
+        <div id="contact-success-modal">
+            <img class="ring-loader" src="img/ring.svg">
+
+            <div class="contact-modal-finish hidden">
+                <button type="button" class="btn btn-default close-form" aria-label="Left Align">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+                <h3>Your form has been submitted</h3>
+                <h5>Thank You!</h5>
+            </div>
+        </div>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/contact.js"></script>
 
         <!-- Google Analytics -->
         <script>
