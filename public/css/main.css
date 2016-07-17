@@ -131,6 +131,16 @@ a,p,label,input {
     font-family: Source Sans Pro;
 }
 
+a {
+  color: #f30000;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #990000;
+  text-decoration: none;
+}
+
 .overlay {
     position: fixed;
     top: 0;
@@ -145,6 +155,10 @@ a,p,label,input {
     width: 20px;
     height: 20px;
     background-image: url('../img/close.svg');
+}
+
+.signature {
+    margin-left: 30px;
 }
 
 /*
@@ -172,10 +186,18 @@ a,p,label,input {
     color: white;
 }
 
-.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    transition: color 0.3s;
+}
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: white;
+    color: #b8b8b8;
+}
+
+.navbar-default .navbar-nav .nav-active > a {
+    color: #b8b8b8;
 }
 
 .navbar-default .navbar-toggle {

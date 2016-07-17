@@ -1,0 +1,43 @@
+/*.about-pane {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	max-width: 1800px;
+	overflow: hidden;
+	display: block;
+}
+
+/*
+#about-pane-1 {
+	background-image: url('');
+	background-repeat: no-repeat;
+	background-size: 1800px 1800px;
+	height: 1500px;
+	background-position: center center;
+}*/
+
+.about-pane {
+	display: block;
+}
+
+#about-pane-1 .about-text {
+	padding-top: 80px;
+	color: black;
+	margin: auto;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+#about-pane-1 .about-text h1 {
+	font-size: 60px;
+}
+
+#about-pane-1 .about-text h5 {
+	font-size: 20px;
+}
+
+.about-banner img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+}

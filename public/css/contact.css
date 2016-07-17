@@ -1,0 +1,9 @@
+.page-content {
+    margin-top: 90px;
+}
+
+.page-content h1 {
+	font-size: 50px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #ccc;
+}
