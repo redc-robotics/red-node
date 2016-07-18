@@ -3,6 +3,8 @@ var router = express.Router();
 
 var path = require('path');
 
+var passport = require('passport');
+var User = require('../models/User.js');
 var Applicant = require('../models/Applicant.js');
 var Contact = require('../models/Contact.js');
 
@@ -58,5 +60,45 @@ router.post('/contact', function(req, res, next) {
       res.json({"success": true});
   });
 });
+
+router.get('/register', function(req, res) {
+  res.sendFile(path.join(__dirname, '..', 'views', 'register.html'));
+});
+
+router.post('/register', function(req, res) {
+  User.register(new User({
+    email: req.body.email
+  }), req.body.password, function(err, user) {
+    if (err) {
+      return res.json({
+        'success': false,
+        user: user
+      });
+    }
+
+    passport.authenticate('local')(req, res, function() {
+      res.redirect('/');
+    });
+  });
+});
+
+router.get('/dashboard', function(req, res) {
+  res.sendFile(path.join(__dirname, '..', 'views', 'dashboard.html'))
+});
+
+router.get('/login', function(req, res) {
+  //res.sendFile(path.join(__dirname, '..', 'views', 'login.html'))
+  res.redirect('/dashboard');
+});
+
+router.post('/login', passport.authenticate('local'), function(req, res) {
+  res.redirect('/');
+});
+
+router.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
+
 
 module.exports = router;

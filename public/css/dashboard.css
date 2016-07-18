@@ -1,0 +1,48 @@
+#login-modal {
+    position: fixed;
+    width: 300px;
+    height: 355px;
+    top: 12%;
+    left: 50%;
+    margin-left: -150px;
+    background-color: white;
+    z-index: 3000;
+}
+
+.modal-body .login-item label {
+    font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+.modal-body .login-item input {
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    background: #f6f6f6;
+    padding: 7px;
+    margin-bottom: 14px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.modal-body input:focus {
+    border-color: #787878;
+}
+
+#join-modal .ring-loader {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 30px;
+    margin-left: -50px;
+}
+
+#join-modal-done,
+#join-modal-fail {
+    font-family: Source Sans Pro;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
