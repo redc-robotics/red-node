@@ -9,7 +9,6 @@ $(document).ready(function() {
       body[d.name] = d.value;
     });
 
-    console.log(body);
     $.ajax({
       method: "POST",
       url: "/contact",
@@ -21,6 +20,11 @@ $(document).ready(function() {
         $('.ring-loader').addClass('hidden');
         $('.contact-modal-finish').removeClass('hidden');
       }, 500);
+    }).fail(function() {
+      window.setTimeout(function() {
+        $('.ring-loader').addClass('hidden');
+        $('.contact-modal-error').removeClass('hidden');
+      }, 500);
     });
   });
 
@@ -30,4 +34,7 @@ $(document).ready(function() {
 function closeForm() {
   $('.overlay').addClass('hidden');
   $('#contact-success-modal').fadeOut(0);
+  $('.ring-loader').removeClass('hidden');
+  $('.contact-modal-finish').addClass('hidden');
+  $('.contact-modal-error').addClass('hidden');
 }

@@ -30,8 +30,10 @@ router.get('/applicants', function(req, res, next) {
 
 router.post('/join', function(req, res, next) {
   Applicant.create(req.body, function(err, post) {
-    if (err)
+    if (err) {
+      err.status = 400;
       next(err);
+    }
     else
       res.json({"success": true});
   });
@@ -48,8 +50,10 @@ router.get('/messages', function(req, res, next) {
 
 router.post('/contact', function(req, res, next) {
   Contact.create(req.body, function(err, post) {
-    if (err)
+    if (err) {
+      err.status = 400;
       next(err);
+    }
     else
       res.json({"success": true});
   });

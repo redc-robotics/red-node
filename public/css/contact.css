@@ -16,6 +16,10 @@ body {
 	margin-bottom: 90px;
 }
 
+.loc-name {
+    margin-bottom: 0px;
+}
+
 
 
 .contact-form-wrapper h2 {
@@ -129,7 +133,8 @@ body {
     padding-top: 20px;
 }
 
-#contact-success-modal .contact-modal-finish button {
+#contact-success-modal .contact-modal-finish button,
+#contact-success-modal .contact-modal-error button {
     position: absolute;
     top: 0;
     right: 0;
@@ -137,6 +142,8 @@ body {
 }
 
 #contact-success-modal .contact-modal-finish button:hover,
-#contact-success-modal .contact-modal-finish button:focus {
+#contact-success-modal .contact-modal-finish button:focus,
+#contact-success-modal .contact-modal-fail button:hover,
+#contact-success-modal .contact-modal-fail button:focus {
     background: none;
 }

@@ -387,7 +387,8 @@ a:focus {
     margin-left: -50px;
 }
 
-#join-modal-done {
+#join-modal-done,
+#join-modal-fail {
     font-family: Source Sans Pro;
     display: block;
     margin-top: 30px;

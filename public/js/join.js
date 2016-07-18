@@ -26,10 +26,16 @@ $(document).ready(function() {
       url: "/join",
       data: body
     }).done(function() {
+      window.joined = true;
       window.setTimeout(function() {
         loader.children('.ring-loader').addClass('hidden');
         $('#join-modal-done').removeClass('hidden');
       }, 500)
+    }).fail(function() {
+      window.setTimeout(function() {
+        loader.children('.ring-loader').addClass('hidden');
+        $('#join-modal-fail').removeClass('hidden');
+      }, 500);
     });
   });
 });
@@ -37,4 +43,12 @@ $(document).ready(function() {
 function closeForm() {
   $('.overlay').addClass('hidden');
   $('#join-modal').fadeOut(0);
+  if (!window.joined) {
+    $('#join-modal-fail').addClass('hidden');
+    $('#join-form').removeClass('hidden');
+    $('#join-modal').css({
+      top: '12%',
+      height: '420px'
+    });
+  }
 }
