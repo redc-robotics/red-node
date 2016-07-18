@@ -141,6 +141,27 @@ a:focus {
   text-decoration: none;
 }
 
+label {
+    font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+label {
+    font-weight: 600;
+    color: #636363;
+    display: block;
+}
+
+input {
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+    background: #f6f6f6;
+    padding: 7px;
+    width: 100%;
+    font-size: 18px;
+}
+
 .overlay {
     position: fixed;
     top: 0;

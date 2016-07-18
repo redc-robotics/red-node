@@ -67,9 +67,12 @@ router.get('/register', function(req, res) {
 
 router.post('/register', function(req, res) {
   User.register(new User({
-    email: req.body.email
+    email: req.body.email,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName
   }), req.body.password, function(err, user) {
     if (err) {
+      console.log(err);
       return res.json({
         'success': false,
         user: user
@@ -87,12 +90,14 @@ router.get('/dashboard', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
+  console.log(req.session);
   //res.sendFile(path.join(__dirname, '..', 'views', 'login.html'))
   res.redirect('/dashboard');
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-  res.redirect('/');
+  //res.redirect('/');
+  res.json({ "success": true });
 });
 
 router.get('/logout', function(req, res) {

@@ -141,9 +141,10 @@ body {
     border: none;
 }
 
-#contact-success-modal .contact-modal-finish button:hover,
-#contact-success-modal .contact-modal-finish button:focus,
-#contact-success-modal .contact-modal-fail button:hover,
-#contact-success-modal .contact-modal-fail button:focus {
-    background: none;
+#contact-success-modal .contact-modal-finish .btn-default:hover,
+#contact-success-modal .contact-modal-finish .btn-default:focus,
+#contact-success-modal .contact-modal-error .btn-default:hover,
+#contact-success-modal .contact-modal-error .btn-default:focus {
+    background: transparent;
+    background-color: transparent;
 }
