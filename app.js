@@ -48,6 +48,13 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/vendor', express.static(path.join(__dirname, 'bower_components')));
 
+// Session logging middleware
+/*
+app.use(function(req, res, next) {
+  console.log(req.session);
+  next();
+});*/
+
 app.use('/', routes);
 app.use('/users', users);
 

@@ -56,11 +56,9 @@
         <div id="login-modal">
             <div class="modal-content-cs">
                 <div class="modal-header">
-                    <button type="button" class="btn btn-default close-form" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
                     <h3>Login</h3>
                 </div>
+                <p id="login-fail">Email or password is incorrect</p>
                 <div class="modal-body">
                     <form id="login-form" action="/login" method="post" accept-charset="UTF-8">
                         <div class="form-fields clearfix">
@@ -72,16 +70,19 @@
                                 <label>Password</label>
                                 <input type="password" name="password">
                             </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" value="" name="remember" />Remember Me</label>
+                            </div>
                         </div>
 
                         <a id="login-submit-form" class="btn btn-primary">Submit</a>
                     </form>
 
-                    <div class="form-loader hidden">
+                    <!--<div class="form-loader hidden">
                         <img class="ring-loader" src="img/ring.svg">
                         <h2 id="login-modal-done" class="hidden">Thanks for registering!</h2>
                         <h2 id="login-modal-fail" class="hidden">An error has occured</h2>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

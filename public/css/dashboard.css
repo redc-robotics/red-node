@@ -1,12 +1,20 @@
 #login-modal {
     position: fixed;
     width: 300px;
-    height: 355px;
+    height: 365px;
     top: 12%;
     left: 50%;
     margin-left: -150px;
     background-color: white;
     z-index: 3000;
+}
+
+#login-modal .modal-header {
+    padding-bottom: 0;
+}
+
+#login-modal .modal-body {
+    padding-top: 0;
 }
 
 .modal-body .login-item label {
@@ -29,20 +37,21 @@
     border-color: #787878;
 }
 
-#join-modal .ring-loader {
-    position: absolute;
-    display: block;
-    width: 100px;
-    height: 100px;
-    left: 50%;
-    top: 30px;
-    margin-left: -50px;
+.modal-body .checkbox {
+    margin-top: 0;
 }
 
-#join-modal-done,
-#join-modal-fail {
-    font-family: Source Sans Pro;
-    display: block;
-    margin-top: 30px;
+.modal-body .checkbox input {
+    width: auto;
+}
+
+.modal-body #login-submit-form {
+    margin-top: 10px;
+}
+
+#login-fail {
     text-align: center;
+    display: block;
+    color: red;
+    opacity: 0;
 }

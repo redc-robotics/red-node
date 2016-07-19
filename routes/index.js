@@ -90,13 +90,17 @@ router.get('/dashboard', function(req, res) {
 });
 
 router.get('/login', function(req, res) {
-  console.log(req.session);
+  // console.log(req.session);
   //res.sendFile(path.join(__dirname, '..', 'views', 'login.html'))
   res.redirect('/dashboard');
 });
 
 router.post('/login', passport.authenticate('local'), function(req, res) {
-  //res.redirect('/');
+  if (req.body.remember !== undefined)
+    req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000;
+  else
+    req.session.cookie.expires = false;
+  
   res.json({ "success": true });
 });
 
