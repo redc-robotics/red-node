@@ -281,6 +281,25 @@ input {
     background-position: 50% 40%;
 }
 
+.jt-mobile {
+    position: absolute;
+    top: 48px;
+    left: 50px;
+}
+
+.jt-mobile h1 {
+    font-size: 80px;
+}
+
+@media (max-width: 400px) {
+    .jt-mobile {
+        left: 17px;
+    }
+    .jt-mobile h1 {
+        font-size: 67px;
+    }
+}
+
 .btn {
     font-size: 15px;
     font-weight: 600;
@@ -398,7 +417,7 @@ input {
     float: right;
 }
 
-#join-modal .ring-loader {
+.ring-loader {
     position: absolute;
     display: block;
     width: 100px;
@@ -414,6 +433,27 @@ input {
     display: block;
     margin-top: 30px;
     text-align: center;
+}
+
+#join-form-page {
+    margin: auto;
+    margin-top: 60px;
+    width: 88%;
+}
+
+#join-form-page #join-submit-form {
+    margin: 15px 0;
+    margin-top: 10px;
+}
+
+@media (max-width: 720px) {
+    .form-loader {
+        margin-top: 150px;
+    }
+
+    .ring-loader {
+        top: 120px;
+    }
 }
 
 /* ==========================================================================

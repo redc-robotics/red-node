@@ -30,6 +30,10 @@ router.get('/applicants', function(req, res, next) {
   });
 });
 
+router.get('/join', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '..', 'views', 'join.html'));
+});
+
 router.post('/join', function(req, res, next) {
   Applicant.create(req.body, function(err, post) {
     if (err) {

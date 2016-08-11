@@ -35,7 +35,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="#"><span id="redc">redC</span> robotics</a>
+                      <a class="navbar-brand" href="/"><span id="redc">redC</span> robotics</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,76 +43,45 @@
                       <ul class="nav navbar-nav navbar-right">
                         <li><a href="/about">About</a></li>
                         <li><a href="/contact">Contact</a></li>
+                        </li>-->
                       </ul>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
                 </nav>
             </header>
 
-            <div class="jumbotron jumbotron-desktop" id="jumbo">
-                <div class="jumbo-text">
-                    <h1>Introducing
-                        Otis</h1>
-
-                    <a href="/about" class="btn btn-primary">Learn More</a>
-                    <a class="btn btn-secondary" id="join-btn">Join the Team</a>
-                </div>
-            </div>
-
-            <div class="jumbotron jumbotron-mobile hidden" id="jumbo-mobile">
-                <div class="jt-mobile">
-                    <h1>Introducing
-                        Otis</h1>
-
-                    <a class="btn btn-primary" id="join-btn-mobile" href="/join">Join the Team</a>
-                </div>
-            </div>
-
-            <div class="overlay hidden"></div>
-        </div>
-
-        <div id="join-modal">
-            <div class="modal-content-cs">
-                <div class="modal-header">
-                    <button type="button" class="btn btn-default close-form" aria-label="Left Align">
-                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </button>
-                    <h3>Join the RedC Team</h3>
-                </div>
-                <div class="modal-body">
-                    <form id="join-form" action="/join" method="post" accept-charset="UTF-8">
-                        <div class="form-fields clearfix">
-                            <div class="form-item">
-                                <label>First Name</label>
-                                <input type="text" name="firstName">
-                            </div>
-                            <div class="form-item">
-                                <label>Last Name</label>
-                                <input type="text" name="lastName">
-                            </div>
-                            <div class="form-item">
-                                <label>Major</label>
-                                <input type="text" name="major">
-                            </div>
-                            <div class="form-item">
-                                <label>Net ID</label>
-                                <input type="text" name="netid">
-                            </div>
-                            <div class="form-item">
-                                <label>Email</label>
-                                <input type="text" name="email">
-                            </div>
-                        </div>
-
-                        <a id="join-submit-form" class="btn btn-primary">Submit</a>
-                    </form>
-
-                    <div class="form-loader hidden">
-                        <img class="ring-loader" src="img/ring.svg">
-                        <h2 id="join-modal-done" class="hidden">Thanks for registering!</h2>
-                        <h2 id="join-modal-fail" class="hidden">An error has occured</h2>
+            <form id="join-form-page" action="/join" method="post" accept-charset="UTF-8">
+                <div class="form-fields clearfix">
+                    <div class="form-item">
+                        <label>First Name</label>
+                        <input type="text" name="firstName">
+                    </div>
+                    <div class="form-item">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName">
+                    </div>
+                    <div class="form-item">
+                        <label>Major</label>
+                        <input type="text" name="major">
+                    </div>
+                    <div class="form-item">
+                        <label>Net ID</label>
+                        <input type="text" name="netid">
+                    </div>
+                    <div class="form-item">
+                        <label>Email</label>
+                        <input type="text" name="email">
                     </div>
                 </div>
+
+                <a id="join-submit-form" class="btn btn-primary">Submit</a>
+                <!--<input type="submit" id="join-submit-form" class="btn btn-primary" value="Submit">-->
+            </form>
+
+            <div class="form-loader hidden">
+                <img class="ring-loader" src="img/ring.svg">
+                <h2 id="join-modal-done" class="hidden">Thanks for registering!</h2>
+                <h2 id="join-modal-fail" class="hidden">An error has occured</h2>
             </div>
         </div>
 
