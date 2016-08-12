@@ -275,23 +275,30 @@ input {
 }
 
 .jumbotron-mobile {
-    background-image: url('../img/jumbo.jpeg');
+    background-image: url('../img/jumbo-mobile.jpeg');
     /*background-size: 130%;*/
     background-size: cover;
-    background-position: 50% 40%;
+    background-position: 39% 45%;
 }
 
 .jt-mobile {
     position: absolute;
-    top: 48px;
-    left: 50px;
+    top: 68px;
+    left: 100px;
 }
 
 .jt-mobile h1 {
-    font-size: 80px;
+    margin-top: 8px;
+    font-size: 72px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+    .jt-mobile {
+        left: 60px;
+    }
+}
+
+@media (max-width: 440px) {
     .jt-mobile {
         left: 17px;
     }
@@ -334,6 +341,28 @@ input {
 .btn-secondary:focus {
     color: white;
     background-color: #3b3b3b;
+}
+
+.btn-wrapper-mobile {
+    margin-top: 220px;
+}
+
+@media (max-height: 600px) {
+    .btn-wrapper-mobile {
+        margin-top: 140px;
+    }
+}
+
+@media (max-height: 480px) {
+    .btn-wrapper-mobile {
+        margin-top: 70px;
+    }
+}
+
+.btn-mobile {
+    width: 150px;
+    margin: 4px 0;
+    display: inline-block;
 }
 
 /*

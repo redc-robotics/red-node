@@ -104,7 +104,27 @@ body {
 	float: right;
 }
 
+@media (max-width: 992px) {
+    #contact-form .message {
+        width: 100%;
+        float: left;
+    }
 
+    #contact-form .form-fields {
+        height: 170px;
+    }
+}
+
+@media (max-width: 530px) {
+    #contact-form .form-item {
+        width: 100%;
+        float: right;
+    }
+
+    #contact-form .form-item input {
+        margin-bottom: 5px;
+    }
+}
 
 #contact-success-modal {
     position: fixed;
