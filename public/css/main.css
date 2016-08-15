@@ -275,10 +275,11 @@ input {
 }
 
 .jumbotron-mobile {
-    background-image: url('../img/jumbo-mobile.jpeg');
+    background-image: url('../img/jumbo-mobile-alt.jpeg');
     /*background-size: 130%;*/
     background-size: cover;
     background-position: 39% 45%;
+    min-height: 400px;
 }
 
 .jt-mobile {
