@@ -285,7 +285,7 @@ input {
 .jt-mobile {
     position: absolute;
     top: 68px;
-    left: 100px;
+    left: 38px;
 }
 
 .jt-mobile h1 {
@@ -295,13 +295,13 @@ input {
 
 @media (max-width: 600px) {
     .jt-mobile {
-        left: 60px;
+        left: 21px;
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 360px) {
     .jt-mobile {
-        left: 17px;
+        left: 10px;
     }
     .jt-mobile h1 {
         font-size: 67px;
